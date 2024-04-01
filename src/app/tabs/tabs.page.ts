@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { SheetPage } from '../sheet/sheet.page';
 
 @Component({
   selector: 'app-tabs',
@@ -7,11 +9,24 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(
+    private modalCtrl: ModalController,     // componente modal de ionic
+  ) {}
 
   // adding shorts
-  add() {
+  // cuando presiono el evento click, se abre un modal controlller
+  async add() {
 
+    // se crea el modal
+    const modal = await this.modalCtrl.create({
+			component: SheetPage,   // necesita un componente
+			breakpoints: [0.5],
+			initialBreakpoint: 0.5,
+			handle: false
+		});
+
+    // se abre el modal
+		await modal.present();
   }
 }
 

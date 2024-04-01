@@ -1,1 +1,13 @@
 
+ion-tab-bar {
+  background: #fff;
+}
+
+ion-tab-button {
+  --color: var(--ion-color-primary);
+
+  // los iconos se encuentran dentro de el tab button
+  ion-icon {
+    --ionicon-stroke-width: 16px;
+  }
+}
