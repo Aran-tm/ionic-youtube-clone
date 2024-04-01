@@ -9,4 +9,10 @@ export class TabsPage {
 
   constructor() {}
 
+  // adding shorts
+  add() {
+
+  }
 }
+
+
