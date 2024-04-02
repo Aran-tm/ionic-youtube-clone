@@ -36,6 +36,7 @@ export class SheetPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(`Working!`);
   }
 
   // cierra el modal controller
