@@ -31,4 +31,9 @@ export class Tab1Page {
 		}, 5000);
   }
 
+  // esta funcion es para seleccionar correctamente un segmento en el toolbar
+  selectSegment(index: number) {
+
+  }
+
 }
