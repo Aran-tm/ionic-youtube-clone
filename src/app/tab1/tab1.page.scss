@@ -1,6 +1,11 @@
 .button-bar {
   display: flex;
   overflow-x: scroll;
+
+  // Esto es parte de la funcionalidad de CSS Shadow Parts
+  ion-button::part(native) {
+    padding: 12px;
+  }
 }
 
 // hidden scrollbar
@@ -9,7 +14,7 @@
 }
 
 .active {
-  --background: #606060;
+  --background: #4f4d4d;
   --color: #fff;
 }
 

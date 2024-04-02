@@ -21,6 +21,7 @@
   <ion-toolbar color="light">
     <div class="button-bar">
       <ion-button
+        shape="round"
         [ngClass]="{'active': seg.selected, 'inactive': !seg.selected}"
         *ngFor="let seg of segments; let i = index"
         (click)="selectSegment(i)"
@@ -32,4 +33,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <div *ngIf="!videos.length">
+    <div *ngFor="let i of [].constructor(4)" class="ion-margin-bottom">
+      <ion-skeleton-text
+        animated
+        style="width: 100%; height: 30vh !important"
+      ></ion-skeleton-text>
+      <ion-skeleton-text
+        style="width: 75%; height: 20px !important; margin: 10px"
+      ></ion-skeleton-text>
+      <ion-skeleton-text
+        style="width: 40%; height: 20px !important; margin: 10px"
+      ></ion-skeleton-text>
+    </div>
+  </div>
+</ion-content>

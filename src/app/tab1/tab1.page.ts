@@ -25,8 +25,9 @@ export class Tab1Page {
     }));
     console.log(this.segments);
 
+    // tiempo de espera para que aparezcan los videos
     setTimeout(() => {
-			// this.selectSegment(0);
+			this.selectSegment(0);
 			this.videos = homeData;
 		}, 5000);
   }
