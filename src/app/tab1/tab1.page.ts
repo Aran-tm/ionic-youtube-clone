@@ -34,6 +34,8 @@ export class Tab1Page {
   // esta funcion es para seleccionar correctamente un segmento en el toolbar
   selectSegment(index: number) {
 
+    this.segments.map((item) => (item.selected = false));
+    this.segments[index].selected = true;
   }
 
 }

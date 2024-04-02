@@ -1,0 +1,19 @@
+.button-bar {
+  display: flex;
+  overflow-x: scroll;
+}
+
+// hidden scrollbar
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  --background: #606060;
+  --color: #fff;
+}
+
+.inactive {
+  --background: #edefef;
+  --color: var(--ion-color-primary);
+}

@@ -21,7 +21,8 @@
   <ion-toolbar color="light">
     <div class="button-bar">
       <ion-button
-        **ngFor="let seg of segments; let i = index"
+        [ngClass]="{'active': seg.selected, 'inactive': !seg.selected}"
+        *ngFor="let seg of segments; let i = index"
         (click)="selectSegment(i)"
         size="small"
       >
