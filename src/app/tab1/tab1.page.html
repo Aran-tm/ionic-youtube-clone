@@ -57,7 +57,10 @@
   </ion-refresher>
 
   <div *ngFor="let video of videos" class="video ion-margin-bottom">
+    <div class="duration">{{ video.duration * 1000 | date:'mm:ss'}}</div>
+
     <img [src]="'./assets/data/' + video.id + '.jpeg'" />
+
     <ion-row>
       <!-- If neccesary adjust Ion Col Size -->
       <ion-col size="3" class="ion-align-items-center">
