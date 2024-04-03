@@ -6,15 +6,17 @@ import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { SharedDirectivesModule } from '../directives/shared-directives.module';
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    ExploreContainerComponentModule,
-    Tab1PageRoutingModule
-  ],
-  declarations: [Tab1Page]
+	imports: [
+		IonicModule,
+		CommonModule,
+		FormsModule,
+		ExploreContainerComponentModule,
+		Tab1PageRoutingModule,
+		SharedDirectivesModule
+	],
+	declarations: [Tab1Page]
 })
 export class Tab1PageModule {}

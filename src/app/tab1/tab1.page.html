@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header #header>
   <ion-toolbar color="light">
     <img src="../../assets/data/logo.png" width="100px" alt="" />
 
@@ -33,7 +33,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [appHideHeader]="header" scrollEvents="true">
   <div *ngIf="!videos.length">
     <div *ngFor="let i of [].constructor(4)" class="ion-margin-bottom">
       <ion-skeleton-text
