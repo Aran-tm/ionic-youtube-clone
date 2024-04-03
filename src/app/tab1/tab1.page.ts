@@ -26,11 +26,13 @@ export class Tab1Page {
     }));
     console.log(this.segments);
 
+    this.videos = homeData;
+
     // tiempo de espera para que aparezcan los videos
-    setTimeout(() => {
-			this.selectSegment(0);
-			this.videos = homeData;
-		}, 1000);
+    //setTimeout(() => {
+		//	this.selectSegment(0);
+			//this.videos = homeData;
+		//}, 1000);
   }
 
   // esta funcion es para seleccionar correctamente un segmento en el toolbar
