@@ -57,18 +57,23 @@
   </ion-refresher>
 
   <div *ngFor="let video of videos" class="video ion-margin-bottom">
-    <img [src]="'../../assets/data/' + video.id + '.jpeg'" />
-
+    <img [src]="'./assets/data/' + video.id + '.jpeg'" />
     <ion-row>
-      <ion-col size="2" class="">
+      <!-- If neccesary adjust Ion Col Size -->
+      <ion-col size="3" class="ion-align-items-center">
         <ion-avatar>
           <ion-img
-            [src]="'../../assets/data/' + video.id + '-channel.jpeg'"
+            [src]="'./assets/data/' + video.id + '-channel.jpeg'"
           ></ion-img>
         </ion-avatar>
       </ion-col>
-      <ion-col size="8">
-        <ion-text> {{video.title}} </ion-text>
+      <ion-col size="7">
+        <ion-text style="font-size: small">{{ video.title }}</ion-text>
+        <div>
+          <ion-text color="medium" style="font-size: small">
+            {{ video.author }} · {{ video.views }} views · {{ video.ago }} ago
+          </ion-text>
+        </div>
       </ion-col>
       <ion-col size="2" class="ion-text-right">
         <ion-button size="small" fill="clear"
