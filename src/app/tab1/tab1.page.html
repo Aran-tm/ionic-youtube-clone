@@ -48,4 +48,15 @@
       ></ion-skeleton-text>
     </div>
   </div>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      refreshingSpinner="crescent"
+      pullingIcon="refresh-outline"
+    ></ion-refresher-content>
+  </ion-refresher>
+
+  <div *ngFor="let video of videos" class="video ion-margin-bottom">
+    <img [src]="'../../assets/data/' + video.id + '.jpeg'" />
+  </div>
 </ion-content>

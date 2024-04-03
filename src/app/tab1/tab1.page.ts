@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import homeData from '../../assets/data/home.json';
+import { RefresherCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -29,7 +30,7 @@ export class Tab1Page {
     setTimeout(() => {
 			this.selectSegment(0);
 			this.videos = homeData;
-		}, 5000);
+		}, 1000);
   }
 
   // esta funcion es para seleccionar correctamente un segmento en el toolbar
@@ -37,6 +38,13 @@ export class Tab1Page {
 
     this.segments.map((item) => (item.selected = false));
     this.segments[index].selected = true;
+  }
+
+  doRefresh(event: RefresherCustomEvent) {
+
+    setTimeout(() => {
+      event.target.complete();
+    }, 1500)
   }
 
 }
